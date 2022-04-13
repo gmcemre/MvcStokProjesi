@@ -1,5 +1,5 @@
 # MvcStokProjesi
-  MVC ile Entity Framework kütüphanesi kullanılarak , Sql Database Konfigürasyonları sağlanarak Ekleme, Silme, Güncelleme (CRUD işlemleri) metotları yapılmıştır.
+  MVC ile Entity Framework kütüphanesi kullanılarak , Sql Database Konfigürasyonları sağlanarak Ekleme, Silme, Güncelleme (CRUD) işlemleri yapılmıştır.
   
   
 ![1](https://user-images.githubusercontent.com/94843366/163094364-4d68fcb8-5df3-433b-9fc1-45b9a15a3c15.jpg)
