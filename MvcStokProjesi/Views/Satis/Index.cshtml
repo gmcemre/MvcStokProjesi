@@ -1,0 +1,29 @@
+﻿@using MvcStokProjesi.Models.Entity
+@model List<Satislar>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+<table class="table table-bordered">
+    <tr>
+        <th>Satış Id</th>
+        <th>Ürün Id</th>
+        <th>Müşteri Id</th>
+        <th>Adet</th>
+        <th>Fiyat</th>
+    </tr>
+    <tbody>
+        @foreach (Satislar satis in Model)
+        {
+            <tr>
+                <th>@satis.SatisId</th>
+                <td>@satis.UrunID</td>
+                <td>@satis.MusteriID</td>
+                <td>@satis.Adet</td>
+                <td>@satis.Fiyat</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
