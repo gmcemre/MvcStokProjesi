@@ -35,6 +35,14 @@ namespace MvcStokProjesi.Controllers
             return RedirectToAction("Index");
         }
 
+        public ActionResult Sil(int id)
+        {
+            var musteri = db.Musteriler.Find(id);
+            db.Musteriler.Remove(musteri);
+            db.SaveChanges();
+            return RedirectToAction("Index");
+        }
+
         public ActionResult MusteriGetir(int id)
         {
             var musteri = db.Musteriler.Find(id);
