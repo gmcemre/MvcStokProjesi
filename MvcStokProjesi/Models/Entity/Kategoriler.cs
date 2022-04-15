@@ -11,7 +11,8 @@ namespace MvcStokProjesi.Models.Entity
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class Kategoriler
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -21,6 +22,8 @@ namespace MvcStokProjesi.Models.Entity
         }
     
         public int KategoriId { get; set; }
+
+        [Required(ErrorMessage ="Lütfen Kategori Adýný Giriniz.")]
         public string KategoriAdi { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

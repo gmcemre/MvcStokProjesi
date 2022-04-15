@@ -26,6 +26,10 @@ namespace MvcStokProjesi.Controllers
         [HttpPost]
         public ActionResult YeniKategori(Kategoriler kategori)
         {
+            if (!ModelState.IsValid)
+            {
+                return View("YeniKategori");
+            }
             db.Kategoriler.Add(kategori);
             db.SaveChanges();
             return RedirectToAction("Index");
