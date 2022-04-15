@@ -1,4 +1,5 @@
-﻿@using MvcStokProjesi.Models.Entity
+﻿
+@using MvcStokProjesi.Models.Entity
 @model List<Musteriler>
 @{
     ViewBag.Title = "Index";
@@ -21,7 +22,7 @@
                 <td>@musteri.MusteriAdi</td>
                 <td>@musteri.MusteriSoyadi</td>
                 <td><a href="~/Musteri/Sil/@musteri.MusteriId" class="btn btn-danger">SİL</a></td>
-                <td><a href="~/Musteri/Güncelle/@musteri.MusteriId" class="btn btn-success">GÜNCELLE</a></td>
+                <td><a href="~/Musteri/MusteriGetir/@musteri.MusteriId" class="btn btn-success">GÜNCELLE</a></td>
             </tr>
         }
     </tbody>
