@@ -26,6 +26,10 @@ namespace MvcStokProjesi.Controllers
         [HttpPost]
         public ActionResult YeniMusteri(Musteriler musteri)
         {
+            if (!ModelState.IsValid)
+            {
+                return View("YeniMusteri");
+            }
             db.Musteriler.Add(musteri);
             db.SaveChanges();
             return RedirectToAction("Index");
