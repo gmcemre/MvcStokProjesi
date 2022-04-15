@@ -13,8 +13,22 @@ namespace MvcStokProjesi.Controllers
         MvcDbStokEntities db = new MvcDbStokEntities();
         public ActionResult Index()
         {
-            var degerler = db.Satislar.ToList();
-            return View(degerler);
+            //var degerler = db.Satislar.ToList();
+            return View();
+        }
+
+        [HttpGet]
+        public ActionResult YeniSatis()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult YeniSatis(Satislar satis)
+        {
+            db.Satislar.Add(satis);
+            db.SaveChanges();
+            return View("Index");
         }
     }
 }

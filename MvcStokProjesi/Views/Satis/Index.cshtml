@@ -1,29 +1,45 @@
-﻿@using MvcStokProjesi.Models.Entity
-@model List<Satislar>
+﻿@model MvcStokProjesi.Models.Entity.Satislar
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_MainLayout.cshtml";
 }
 
-<table class="table table-bordered">
-    <tr>
-        <th>Satış Id</th>
-        <th>Ürün Id</th>
-        <th>Müşteri Id</th>
-        <th>Adet</th>
-        <th>Fiyat</th>
-    </tr>
-    <tbody>
-        @foreach (Satislar satis in Model)
-        {
-            <tr>
-                <th>@satis.SatisId</th>
-                <td>@satis.UrunID</td>
-                <td>@satis.MusteriID</td>
-                <td>@satis.Adet</td>
-                <td>@satis.Fiyat</td>
-            </tr>
-        }
-    </tbody>
-</table>
 
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#Modal1">
+    Satış Yap
+</button>
+
+<div class="modal" id="Modal1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title">Satış Yapma Ekranı</h2>
+            </div>
+            <form method="post" action="~/Satis/YeniSatis">
+                <div class="modal-body">
+                    <label>
+                        Ürün Adı :
+                    </label>
+                    @Html.TextBoxFor(x => x.UrunID, new { @class = "form-control" })
+                    <br />
+                    <label>
+                        Müşteri Adı Soyadı :
+                    </label>
+                    @Html.TextBoxFor(x => x.MusteriID, new { @class = "form-control" })
+                    <br />
+                    <label>
+                        Adet :
+                    </label>
+                    @Html.TextBoxFor(x => x.Adet, new { @class = "form-control" })
+                    <br />
+                    <label>
+                        Fiyat :
+                    </label>
+                    @Html.TextBoxFor(x => x.Fiyat, new { @class = "form-control" })
+                    <br />
+                    <button class="btn btn-info">Satış İşlemini Yap</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
