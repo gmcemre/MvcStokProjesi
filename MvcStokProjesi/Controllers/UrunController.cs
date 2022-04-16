@@ -13,9 +13,9 @@ namespace MvcStokProjesi.Controllers
     {
         // GET: Urun
         MvcDbStokEntities db = new MvcDbStokEntities();
-        public ActionResult Index(int sayfa = 1)
+        public ActionResult Index()
         {
-            var degerler = db.Urunler.ToList().ToPagedList(sayfa, 4);
+            var degerler = db.Urunler.ToList();
             return View(degerler);
         }
 
